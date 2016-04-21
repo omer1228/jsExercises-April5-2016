@@ -9,9 +9,8 @@
     sayHello("Mat") => Hello Mat
 */
 function sayHello(name) {
-
+return ("Hello " + name);
 }
-
 /*
   Create a full name using the first and last parameters and store into a variable
   Then return a string that will add a "Hello" string in front of the full name
@@ -20,7 +19,8 @@ function sayHello(name) {
     sayHelloAdv("Alex", "Pelan") => Hello Alex Pelan
 */
 function sayHelloAdv(first, last) {
-
+  var name = first + " " + last;
+ return sayHello (name);
 }
 
 /*
@@ -30,7 +30,7 @@ function sayHelloAdv(first, last) {
     playerStats("Meghan", 12) => Meghan made 12 points
 */
 function playerStats(player, points) {
-
+return (player + " made" + " " + points + " " + "points");
 }
 
 /*
@@ -41,7 +41,7 @@ function playerStats(player, points) {
     calculateScore(8, 6) => 34
 */
 function calculateScore(twoPointersMade, threePointersMade) {
-
+return (twoPointersMade * 2 + threePointersMade * 3);
 }
 
 /*
@@ -52,5 +52,7 @@ function calculateScore(twoPointersMade, threePointersMade) {
     playerStatsAdv("Meghan", 4, 2) => "Meghan made 14 points"
 */
 function playerStatsAdv(player, twoPointersMade, threePointersMade) {
-
+var newScore = calculateScore(twoPointersMade, threePointersMade);
+var newResult = playerStats (player, newScore);
+return (newResult);
 }
